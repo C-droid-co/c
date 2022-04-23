@@ -68,11 +68,7 @@ def eliminate_channel(update: Update, context: CallbackContext):
         bot.ban_chat_sender_chat(sender_chat_id=sender_chat.id, chat_id=chat.id)
 
 
-__help__ = """
-Restrict users from sending as anonymous channels
- • `/antichannel <on/off/yes/no>`*:* enables antichannel in the current chat
-If enabled, the message from the channel which the user sends will be banned.
-"""
+
 
 ANTICHANNEL_HANDLER = CommandHandler("antichannel", set_antichannel)
 ELIMINATE_CHANNEL_HANDLER = MessageHandler(
@@ -81,7 +77,7 @@ ELIMINATE_CHANNEL_HANDLER = MessageHandler(
 
 dispatcher.add_handler(ANTICHANNEL_HANDLER, SET_CH_GROUP)
 dispatcher.add_handler(ELIMINATE_CHANNEL_HANDLER, ELEMINATE_CH_GROUP)
-__mod_name__ = "Antichannel"
+
 
 __handlers__ = [
     (ANTICHANNEL_HANDLER, SET_CH_GROUP),
