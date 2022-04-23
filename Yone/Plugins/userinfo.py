@@ -216,7 +216,7 @@ def grroup_info(update: Update, context: CallbackContext):
 
 
  
-def gifid(update: Update, context: CallbackContext):
+def giifid(update: Update, context: CallbackContext):
     msg = update.effective_message
     if msg.reply_to_message and msg.reply_to_message.animation:
         update.effective_message.reply_text(
