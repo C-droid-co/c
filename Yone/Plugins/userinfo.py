@@ -391,7 +391,7 @@ def about_me(update: Update, context: CallbackContext):
 def set_about_me(update: Update, context: CallbackContext):
     message = update.effective_message
     user_id = message.from_user.id
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 1129957342]:
         message.reply_text("Error! Unauthorized")
         return
     bot = context.bot
