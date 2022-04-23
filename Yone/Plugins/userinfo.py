@@ -18,7 +18,7 @@ from Yone import (
     INFOPIC,
     dispatcher,
 )
-from Yone.__help__ import STATS, USER_INFO
+from Yone.finisher import STATS, USER_INFO
 import Yone.Database.userinfo_sql as sql
 from Yone.Plugins.disable import DisableAbleCommandHandler
 from Yone.Database.global_bans_sql import is_user_gbanned
