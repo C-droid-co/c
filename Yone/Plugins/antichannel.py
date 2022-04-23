@@ -1,13 +1,13 @@
 from telegram.ext.filters import Filters
 from telegram import Update, message
-from AmeliaRobot.modules.helper_funcs.chat_status import (
-    bot_can_delete,
+from Yone.Handlers.validation import (
+    can_delete,
     is_bot_admin,
-    user_admin,
+    is_user_admin,
 )
-from AmeliaRobot import dispatcher
+from Yone import dispatcher
 import html
-from AmeliaRobot.modules.sql.antichannel_sql import (
+from Yone.Database.antichannel_sql import (
     antichannel_status,
     disable_antichannel,
     enable_antichannel,
@@ -17,14 +17,14 @@ from telegram.ext import (
     CommandHandler,
     MessageHandler,
 )
-from AmeliaRobot.modules.helper_funcs.alternate import typing_action
+from Yone.Handlers.alternate import typing_action
 
 SET_CH_GROUP = 100
 ELEMINATE_CH_GROUP = 110
 
 
 @typing_action
-@user_admin
+@is_user_admin
 def set_antichannel(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
@@ -51,7 +51,7 @@ def set_antichannel(update: Update, context: CallbackContext):
     )
 
 
-# @bot_can_delete
+# @can_delete
 def eliminate_channel(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
