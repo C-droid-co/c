@@ -19,7 +19,7 @@ from Yone import REQUESTER as TIGERS
 from Yone import DEV_USERS as WOLVES
 from Yone.Plugins.disable import DisableAbleCommandHandler
 from Yone.Handlers.alternate import send_message
-from Yone.Handlers.chat_status import is_user_admin
+from Yone.Handlers.validation import is_user_admin
 from Yone.Handlers.extraction import (
     extract_unt_fedban,
     extract_user,
