@@ -23,8 +23,8 @@ SET_CH_GROUP = 100
 ELEMINATE_CH_GROUP = 110
 
 
-@typing_action
-@is_user_admin
+# @typing_action
+# @is_user_admin
 def set_antichannel(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
