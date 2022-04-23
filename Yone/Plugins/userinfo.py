@@ -524,7 +524,7 @@ GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio, run_async=True)
 STATS_HANDLER = CommandHandler("sttats", sttats, run_async=True)
 ID_HANDLER = DisableAbleCommandHandler("iid", geet_id, run_async=True)
 GIFID_HANDLER = DisableAbleCommandHandler("giifid", giifid, run_async=True)
-INFO_HANDLER = DisableAbleCommandHandler(("iinfo", "bbook"), info, run_async=True)
+INFO_HANDLER = DisableAbleCommandHandler(("innfo", "bbook"), innfo, run_async=True)
 GINFO_HANDLER = DisableAbleCommandHandler("giinfo", grroup_info, run_async=True)
 
 
