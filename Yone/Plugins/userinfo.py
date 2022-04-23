@@ -110,7 +110,7 @@ def make_bar(per):
 
 
  
-def get_id(update: Update, context: CallbackContext):
+def geet_id(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     message = update.effective_message
     chat = update.effective_chat
@@ -154,7 +154,7 @@ def get_id(update: Update, context: CallbackContext):
 
 @user_admin
 @sudo_plus
-def group_info(update: Update, context: CallbackContext):
+def grroup_info(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     message = update.effective_message
     chat = update.effective_chat
@@ -228,7 +228,7 @@ def gifid(update: Update, context: CallbackContext):
 
 
  
-def info(update: Update, context: CallbackContext):
+def innfo(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     message = update.effective_message
     chat = update.effective_chat
@@ -421,7 +421,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
  
 @support_plus
-def stats(update: Update, context: CallbackContext):
+def sttats(update: Update, context: CallbackContext):
     first_name = update.effective_user.first_name
     stats = f"<b>Current stats of {escape_markdown(context.bot.first_name)}:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
@@ -521,11 +521,11 @@ def __user_info__(user_id):
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
 GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio, run_async=True)
 
-STATS_HANDLER = CommandHandler("stats", stats, run_async=True)
-ID_HANDLER = DisableAbleCommandHandler("id", get_id, run_async=True)
-GIFID_HANDLER = DisableAbleCommandHandler("gifid", gifid, run_async=True)
-INFO_HANDLER = DisableAbleCommandHandler(("info", "book"), info, run_async=True)
-GINFO_HANDLER = DisableAbleCommandHandler("ginfo", group_info, run_async=True)
+STATS_HANDLER = CommandHandler("sttats", sttats, run_async=True)
+ID_HANDLER = DisableAbleCommandHandler("iid", geet_id, run_async=True)
+GIFID_HANDLER = DisableAbleCommandHandler("giifid", giifid, run_async=True)
+INFO_HANDLER = DisableAbleCommandHandler(("iinfo", "bbook"), info, run_async=True)
+GINFO_HANDLER = DisableAbleCommandHandler("giinfo", grroup_info, run_async=True)
 
 
 SET_ABOUT_HANDLER = DisableAbleCommandHandler("setme", set_about_me, run_async=True)
@@ -542,30 +542,7 @@ dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
 
-__help__ = """
-*ID:*
- ‣ `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
- ‣ `/gifid`*:* reply to a gif to me to tell you its file ID.
-*Self addded information:* 
- ‣ `/setme <text>`*:* will set your info
- ‣ `/me`*:* will get your or another user's info.
-Examples:
- `/setme I am a wolf.`
- `/me @username(defaults to yours if no user specified)`
-*Information others add on you:* 
- ‣ `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
-‣ `/setbio <text>`*:* while replying, will save another user's bio 
-Examples:
- `/bio @username(defaults to yours if not specified).`
- `/setbio This user is a wolf` (reply to the user)
-*Overall Information about you:*
- ‣ `/info`*:* get information about a user. 
- ‣ `/ginfo`*:* get information about a Group. 
- 
-*What is that health thingy?*
- Come and see [HP System explained](https://t.me/Yone_Updates)
-"""
-__mod_name__ = "Infos"
+
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER,
