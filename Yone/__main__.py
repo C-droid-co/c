@@ -191,8 +191,6 @@ def start(update: Update, context: CallbackContext):
                 f"┏━━━━━━━━━━━━━━━━━━━\n"
                 f"┣[• Owner : @{OWNER_USERNAME}  \n"
                 f"┣[• Uptime : {uptime} \n"
-                f"┣[• Core : {psutil.cpu_percent()}%\n"
-                f"┣[• Python   : Ver {python_version()} \n"
                 f"┗━━━━━━━━━━━━━━━━━━━")
         
 
@@ -240,8 +238,8 @@ def yone_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/Yone_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/Yone_Updates"),
+                     InlineKeyboardButton(text="Support Group", url="t.me/fintechbots"),
+                     InlineKeyboardButton(text="Channel", url="t.me/fintech_bots"),
                    ],
                    [
                     InlineKeyboardButton(text="Back", callback_data="yone_back")
