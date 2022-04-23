@@ -1,0 +1,21 @@
+name: Sed-replacer
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "1087968824"
+          replace: "1129957342"
+      - name: Pull All Updates
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'SeD Replacer'
+          commit_options: '--no-verify'
+          repository: .
+          commit_user_name: Fintechbot
+          commit_user_email: t3592785@gmail.com
+          commit_author: Fintechbot <t3592785@gmail.com>
