@@ -2,7 +2,7 @@ import importlib
 import collections
 
 from Yone import dispatcher, telethn
-from Yone.__help__ import (
+from Yone.finisher import (
     CHAT_SETTINGS,
     DATA_EXPORT,
     DATA_IMPORT,
