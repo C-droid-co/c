@@ -36,7 +36,7 @@ from Yone import (
 
 from Yone.Plugins import ALL_MODULES
 
-from Yone.__help__ import *
+from Yone.finisher import *
 
 
 def get_readable_time(seconds: int) -> str:
