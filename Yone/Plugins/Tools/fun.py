@@ -2,7 +2,7 @@ import html
 import random
 import time
 from Yone.Database.approve_sql import is_approved
-import Yone.Plugins.Tools.fun_strings as fun_strings
+import Yone.Plugins.Tools.gun_strings as fun_strings
 from Yone import dispatcher
 from Yone.Plugins.disable import DisableAbleCommandHandler
 from Yone.Handlers.validation import is_user_admin
